@@ -2129,3 +2129,8 @@ h1, h2, h3, h4, .section__title, .part__title { text-wrap: balance; }
 }
 .seg:has(> button:nth-child(4)) button { padding-inline: 8px; font-size: 12.5px; }
 @media (max-width: 720px) { .seg:has(> button:nth-child(4)) { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); border-radius: 22px; } .seg:has(> button:nth-child(4)) button { font-size: 13px; } }
+
+/* subtítulo dentro de una sección (temas unidos en una sola entrada del índice) */
+.h4-sub { margin: 34px 0 12px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--celeste); }
+.h3 + .h4-sub { margin-top: 4px; }
+.closing .closing-txt { margin-top: 0; }

@@ -120,10 +120,10 @@ function mountIcons(root = document) {
    ========================================================= */
 const sections = $$("main > section[data-title]");
 const DESC = {
-  introduccion: "Nombre, logotipo principal, claim y origen", identidad: "Concepto, valores, público, voz y competencia", logotipo: "Isotipo, construcción, versiones y usos",
+  introduccion: "Nombre, logotipo principal, claim y origen", identidad: "Concepto, valores, público, voz y hallazgos", logotipo: "Isotipo, construcción, versiones y usos",
   color: "Paleta, valores y contraste", tipografia: "Poppins, cursiva display y jerarquías", recursos: "Formas, patrones, puntos articulares e íconos",
   fotografia: "Imagen, iluminación, encuadre y motion", aplicaciones: "Piezas físicas y digitales en uso real", ui: "Tokens, componentes, grillas y pantallas",
-  descargas: "Logos, paleta, recursos y plantillas", cierre: "Conclusión general y equipo"
+  descargas: "Logos, animaciones, íconos y paleta"
 };
 const slug = t => t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 function buildNav() {
@@ -1029,6 +1029,7 @@ if (new URLSearchParams(location.search).get("print") === "largo") {
   fitPage(); addEventListener("load", fitPage); setInterval(fitPage, 1000);
 }
 const endLogo = $("#endLogo");
+if (endLogo)
 new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { endLogo.classList.add("is-play"); o.disconnect(); } }), { threshold: .5 }).observe(endLogo);
 })();
 
